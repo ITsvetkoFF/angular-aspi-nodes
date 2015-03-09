@@ -1,0 +1,33 @@
+<div ng-controller="Tab1Ctrl">
+  <form class="col-sm-6">
+    <h4>Basic controls</h4>
+    <div class="form-group">
+      <label for="inputNodeQuantity">Number of nodes:</label>
+      <input class="form-control" id="inputNodeQuantity" ng-model="form.nodeQuantity" required >
+    </div>
+    <div class="form-group">
+      <label for="inputFieldWidth">Field width (m):</label>
+      <input class="form-control" id="inputFieldWidth" ng-model="form.fieldWidth" required >
+    </div>
+    <div class="form-group">
+      <label for="inputFieldHeight">Field height (m):</label>
+      <input class="form-control" id="inputFieldHeight" ng-model="form.fieldHeight" required >
+    </div>
+  </form>
+
+  <form class="col-sm-6">
+    <h4>Ranges and localization</h4>
+    <div class="form-group">
+      <label for="inputFieldMaxRange">Maximum range (m):</label>
+      <input class="form-control" id="inputFieldMaxRange" ng-model="form.fieldMaxRange" required/>
+    </div>
+    <div class="form-group">
+      <label for="inputFieldMinRange">Minimum range (m):</label>
+      <input class="form-control" id="inputFieldMinRange" ng-model="form.fieldMinRange" required>
+    </div>
+    <div class="form-group">
+      <label for="inputLocationAccuracy">Localization accuracy (m):</label>
+      <input class="form-control" id="inputLocationAccuracy" ng-model="form.locationAccuracy" required>
+    </div>
+  </form>
+</div>
