@@ -4,3 +4,41 @@ body {
 
 .control-group label, .control-group input {
   display: block;}
+
+#megaTable {
+  font-size:11px;
+}
+
+#megaTable td {
+  padding: 1px; !important;
+}
+
+
+
+/*SVG*/
+
+.point {
+  stroke: #000;
+}
+.point-radius {
+  stroke: rgba(0,0,0,0.1);
+  fill:rgba(0,0,0,0.02);
+}
+
+.point.selected {
+  fill: red;
+  stroke: red;
+  stroke-width: 5px;
+  z-index: 6;
+}
+.link {
+  stroke: rgba(0,0,0,0.5);
+  stroke-width: 1px;
+  z-index: 5;
+}
+
+.node {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}

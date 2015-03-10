@@ -19,11 +19,11 @@
                 <tab-heading><i class="glyphicon glyphicon-wrench"></i> Set parameters</tab-heading>
                 <ng-include src="'partials/tab1.html'"></ng-include>
               </tab>
-              <tab>
+              <tab select="redrawTab2()" disabled = "{{tabdata.itemsDisabledBeforeSimulation}}">
                 <tab-heading><i class="glyphicon glyphicon-option-vertical"></i> Nodes</tab-heading>
-                Second Tab
+                <ng-include src="'partials/tab2.html'"></ng-include>
               </tab>
-              <tab>
+              <tab disabled = "{{tabdata.itemsDisabledBeforeSimulation}}">
                 <tab-heading><i class="glyphicon glyphicon-list-alt"></i> Flow</tab-heading>
                 Third Tab
               </tab>
@@ -31,15 +31,15 @@
             </tabset>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-8" ng-controller="SimulationController">
+        <div class="col-sm-6 col-lg-8" ng-controller="SimulationCtrl">
 
           <h3>
             Simulation
-            <button class="btn btn-default btn-xs" type="submit"><i class="glyphicon glyphicon-play"></i>Start</button>
-            <button class="btn btn-default btn-xs" type="submit"><i class="glyphicon glyphicon-step-forward"></i>Step by step</button>
+            <button class="btn btn-default btn-xs" type="submit" ng-click="performSimulation()"><i class="glyphicon glyphicon-play"></i>Start</button>
+            <button class="btn btn-default btn-xs disabled" type="submit"><i class="glyphicon glyphicon-step-forward"></i>Step by step</button>
             <button class="btn btn-default btn-xs disabled" type="submit"><i class="glyphicon glyphicon-chevron-right"></i>Next</button>
           </h3>
-          <svg></svg>
+          <svg id="mainSvg"></svg>
 
         </div>
       </div>
@@ -53,7 +53,10 @@
     <script src="app.js"></script>
     <script src="controllers/tabs.js"></script>
     <script src="controllers/tab1.js"></script>
+    <script src="controllers/tab2.js"></script>
     <script src="controllers/simulation.js"></script>
+    <script src="services/simulationDataService.js"></script>
+
     <script src="ui-modules/js/tabs.js"></script>
 
   </body>

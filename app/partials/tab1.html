@@ -30,4 +30,28 @@
       <input class="form-control" id="inputLocationAccuracy" ng-model="form.locationAccuracy" required>
     </div>
   </form>
+
+  <form class="col-sm-12">
+    <div class="checkbox">
+      <label>
+        <h4><input type="checkbox" checked>  Random waypoint mobitity model</h4>
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="inputNodeSpeed">Node max. speed</label>
+      <input class="form-control" id="inputNodeSpeed" ng-model="form.nodeMaxSpeed" placeholder="in pixels/step">
+    </div>
+  </form>
+
+  <form class="col-sm-12">
+    <h4>Display parameters</h4>
+    <label class="checkbox-inline">
+      <input type="checkbox" ng-model="form.displayConnections"> Display connections (subjective)
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" ng-model="form.displayRanges"> Display ranges
+    </label>
+  </form>
+
+
 </div>
