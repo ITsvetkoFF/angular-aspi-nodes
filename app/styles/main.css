@@ -2,6 +2,10 @@ body {
   padding-top: 10px;
 }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
 .control-group label, .control-group input {
   display: block;}
 

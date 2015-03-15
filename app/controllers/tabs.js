@@ -2,22 +2,13 @@
 
 angular.module('aspiApp')
   .controller('TabsCtrl', function ($scope, simulationDataService) {
-    $scope.tabdata = {};
-    $scope.tabdata.itemsDisabledBeforeSimulation = "false";
     $scope.$watch(
-      // This is the important part
+      // TODO: IT SMELLLSS
       function() {
-        return simulationDataService.stepNumber;
+        return simulationDataService.stepNumber == 0;
       },
       function(newValue) {
-        if (newValue > 0) {
-          $scope.tabdata.itemsDisabledBeforeSimulation = "false";
-        }
-      },
-      true
+        $scope.tab2disabled = newValue;
+      }
     );
-    $scope.redrawTab2 = function() {
-      //TODO:it smells
-      angular.element(document.getElementById('Tab2CtrlElement')).scope().redrawTable();
-    }
   });

@@ -12,6 +12,7 @@ angular.module('aspiApp')
     $scope.form.nodeMaxSpeed = '5';
     $scope.form.displayConnections = true;
     $scope.form.displayRanges = true;
+    $scope.form.planarization = 'no';
 
     //BINDING
     simulationDataService.form = $scope.form;
