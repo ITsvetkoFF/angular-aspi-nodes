@@ -38,14 +38,17 @@
           <h3>
             Simulation
             <button class="btn btn-default btn-xs" type="submit" ng-click="populateSimulation()"><i class="glyphicon glyphicon-play"></i>Populate</button>
-            <button class="btn btn-default btn-xs disabled" type="submit"><i class="glyphicon glyphicon-step-forward"></i>Step by step</button>
+            <button class="btn btn-default btn-xs" type="submit" ng-click="testGPSRonly(true)"><i class="glyphicon glyphicon-step-forward"></i>Test GPSR only greedy</button>
+            <button class="btn btn-default btn-xs" type="submit" ng-click="testGPSRonly(false)"><i class="glyphicon glyphicon-step-forward"></i>Test GPSR full</button>
             <button class="btn btn-default btn-xs disabled" type="submit"><i class="glyphicon glyphicon-chevron-right"></i>Next</button>
-            <button class="btn btn-default btn-xs" ng-init="showStats=false" ng-click="showStats=!showStats">Show stats</button>
+            <button class="btn btn-default btn-xs" ng-init="showStats=true" ng-click="showStats=!showStats">Show stats</button>
 
           </h3>
-          <div ng-show="showStats" style="position: absolute; background-color: rgba(255,255,255,0.5);">
+          <div ng-show="showStats" id="statsBlock">
             <div ng-show="numberOfLinks">Number of links: {{numberOfLinks}}</div>
             <div ng-show="averegeDegreeOfLinks">Av. degree of links: {{averegeDegreeOfLinks}}</div>
+            <div ng-show="GPSRLosses">GPSR-only fails among 10000 random connections: {{GPSRLosses}}</div>
+            <div ng-show="mainGroup">(Considered only {{mainGroup}} connected nodes)</div>
           </div>
           <svg id="mainSvg">
           </svg>
@@ -56,7 +59,6 @@
 
 
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/d3/d3.min.js"></script>
 
     <script src="app.js"></script>

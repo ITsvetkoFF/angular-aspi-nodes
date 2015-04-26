@@ -51,16 +51,23 @@
     <label class="checkbox-inline">
       <input type="checkbox" ng-change="redrawSimulation()" ng-model="form.displayConnections"> Display connections (subjective)
     </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" ng-change="redrawSimulation()" ng-model="form.displayNodeIds"> Display ID's
+    </label>
     <br/>
+    <h4>Planarization</h4>
     <span ng-show="form.displayConnections">
       <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="no"> No plnrztn
+        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="no"> No
       </label>
       <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="gg"> GG
+        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()"  ng-model="form.planarization" value="GG"> GG
       </label>
       <label class="radio-inline">
-        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="ggMy"> GG (My)
+        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="ggMy1"> GG (My1)
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="ggMy2"> GG (My2 — No crossings)
       </label>
       <label class="radio-inline">
         <input type="radio" name="inlineRadioOptions" ng-change="redrawSimulation()" ng-model="form.planarization" value="rng"> RNG
